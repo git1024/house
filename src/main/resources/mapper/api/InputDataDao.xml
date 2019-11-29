@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.honghu.cloud.modules.house.dao.InputDataDao">
+
+	<insert id="save" parameterType="com.honghu.cloud.modules.house.entity.InputDataEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_input_data
+		(
+			proxy_name,
+			customer_name,
+			customer_mobile,
+			create_time,
+			update_time,
+			remark,
+			attribute,
+			version
+		)
+		values
+			(
+				#{proxyName},
+				#{customerName},
+				#{customerMobile},
+				#{createTime},
+				#{updateTime},
+				#{remark},
+				#{attribute},
+				#{version}
+			)
+	</insert>
+
+
+</mapper>
